@@ -1,0 +1,15 @@
+﻿<Application x:Class="BasecEngineeringCalculator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BasecEngineeringCalculator"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonSyle" TargetType="Button">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontWeight" Value="UltraBold"/>
+
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
