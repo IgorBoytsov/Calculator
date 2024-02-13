@@ -30,6 +30,34 @@ namespace BasecEngineeringCalculator.Pages
         char Sign;
         double Result;
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            txtBoxMain.Text += (string)button.Content;
+
+        }
+
+        private void Button_ClickClean(object sender, RoutedEventArgs e)
+        {
+            txtBoxMain.Clear();
+        }
+
+        private void Button_ClickCleanLast(object sender, RoutedEventArgs e)
+        {
+            if (txtBoxMain.Text != "")
+            {
+                txtBoxMain.Text = txtBoxMain.Text.Remove(txtBoxMain.Text.Length - 1);
+            }
+        }
+
+        private void Button_ClickCleanAll(object sender, RoutedEventArgs e)
+        {
+            txtBoxMain.Clear();
+            labelMain.Content = string.Empty;
+            ArgumentOne = double.NaN;
+            ArgumentTwo = double.NaN;
+        }
+
         private void Button_Click_Division(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
@@ -81,7 +109,15 @@ namespace BasecEngineeringCalculator.Pages
         }
         private void Button_Click_Equals(object sender, RoutedEventArgs e)
         {
-            ArgumentTwo = double.Parse(txtBoxMain.Text);
+            if (txtBoxMain.Text == "")
+            {
+                labelMain.Content = "Вы ничего не ввели";
+            }
+            else
+            {
+                ArgumentTwo = double.Parse(txtBoxMain.Text);
+            }
+
             switch (Sign)
             {
                 case '/':
@@ -101,33 +137,6 @@ namespace BasecEngineeringCalculator.Pages
                     txtBoxMain.Text = Result.ToString("F2");
                     break;
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Button button = sender as Button;
-            txtBoxMain.Text += (string)button.Content;
-        }
-
-        private void Button_ClickClean(object sender, RoutedEventArgs e)
-        {
-            txtBoxMain.Clear();
-        }
-
-        private void Button_ClickCleanLast(object sender, RoutedEventArgs e)
-        {
-            if (txtBoxMain.Text != "")
-            {
-                txtBoxMain.Text = txtBoxMain.Text.Remove(txtBoxMain.Text.Length - 1);
-            }
-        }
-
-        private void Button_ClickCleanAll(object sender, RoutedEventArgs e)
-        {
-            txtBoxMain.Clear();
-            labelMain.Content = string.Empty;
-            ArgumentOne = double.NaN;
-            ArgumentTwo = double.NaN;
         }
     }
 }
