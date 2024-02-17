@@ -4,11 +4,105 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BasecEngineeringCalculator.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d"
+      Background="White"
       Title="EngineeringCalcPage">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label 
+            Grid.ColumnSpan="7" 
+            Grid.Row="0" 
+            Content="Ошибка" 
+            HorizontalAlignment="Right" />
+
+        <TextBox 
+            Grid.ColumnSpan="7" 
+            Grid.Row="1"
+            Name="txtBoxMain"
+            FontSize="50" 
+            TextAlignment="Right" 
+            TextWrapping="Wrap" 
+            IsReadOnly="true" 
+            BorderBrush="Black" 
+            BorderThickness="0"/>
+
+        <!--#region ТРИГАНОМЕТРИЯ -->
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="2" Content="^"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="1" Grid.Row="2" Content="n!"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="2" Content="±"/>
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="3" Content="asin"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="1" Grid.Row="3" Content="sin"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="3" Content="1/x"/>
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="4" Content="acos"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="1" Grid.Row="4" Content="cos"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="4" Content="√"/>
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="5" Content="atan"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="1" Grid.Row="5" Content="tan"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="5" Content="ln"/>
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="6" Content="lg"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="1" Grid.Row="6" Content="π"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="6" Content="e"/>
+
+        <!--#endregion-->
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="2" Content="С"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="2" Content="( )"/>
+        <Button Click="Button_ClickCleanLast" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="2" Content="⌫"/>
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="3" Content="7"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="3" Content="8"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="3" Content="9"/>
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="4" Content="4"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="4" Content="5"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="4" Content="6"/>
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="5" Content="1"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="5" Content="2"/>
+        <Button Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="5" Content="3"/>
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="6" Content="0"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="6" Content=","/>
+
+        <!--#region ЦИФЕРКИ -->
+
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="2" Content="/"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="3" Content="*"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="4" Content="-"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="5" Content="+"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="6" Content="="/>
+
+        <!--#endregion-->
+
+        
+        <!--#region ЗНАКИ -->
+
+
+
+        <!--#endregion-->
     </Grid>
 </Page>

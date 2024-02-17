@@ -8,7 +8,14 @@
             <Style x:Key="ButtonSyle" TargetType="Button">
                 <Setter Property="FontSize" Value="15"/>
                 <Setter Property="FontWeight" Value="UltraBold"/>
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="BorderThickness" Value="0"/>
 
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="10" ShadowDepth="0" Direction="315" Opacity="0.5"/>
+                    </Setter.Value>
+                </Setter>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

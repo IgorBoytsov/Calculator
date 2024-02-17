@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
 
 namespace BasecEngineeringCalculator.Pages
 {
@@ -23,6 +10,20 @@ namespace BasecEngineeringCalculator.Pages
         public EngineeringCalcPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click_Get_Sign(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            txtBoxMain.Text += button.Content.ToString();
+        }
+
+        private void Button_ClickCleanLast(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (txtBoxMain.Text != "")
+            {
+                txtBoxMain.Text = txtBoxMain.Text.Remove(txtBoxMain.Text.Length - 1);
+            }
         }
     }
 }

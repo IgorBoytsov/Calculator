@@ -6,16 +6,20 @@
         xmlns:local="clr-namespace:BasecEngineeringCalculator"
         mc:Ignorable="d"
         Closing="Window_Closing"
-        Title="MainWindow" Height="660" Width="400" MinHeight="400" MinWidth="200">
+        WindowStartupLocation="CenterScreen"
+        Height="660" Width="400" 
+        MinHeight="660" MinWidth="400"
+        Title="MainWindow" >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Menu Height="25" VerticalAlignment="Top">
             <MenuItem Header="Тип калькулятора">
                 <MenuItem x:Name="Calculater" 
-                      Header="Калькулятор" Click="MenuItem_Click_Calc"></MenuItem>
+                      Header="Калькулятор" Click="MenuItem_Click_Calc">
+                </MenuItem>
                 <MenuItem x:Name="IngineeringCalculator" 
                       Header="Инженерный калькулятор"
                       Click="MenuItem_Click_EngeneeringCalc"></MenuItem>

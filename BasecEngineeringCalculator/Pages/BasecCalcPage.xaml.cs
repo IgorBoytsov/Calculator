@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BasecEngineeringCalculator.Pages
 {
@@ -107,34 +95,32 @@ namespace BasecEngineeringCalculator.Pages
                     break;
             }
         }
+
         private void Button_Click_Equals(object sender, RoutedEventArgs e)
         {
-            if (txtBoxMain.Text == "")
-            {
-                labelMain.Content = "Вы ничего не ввели";
-            }
-            else
-            {
-                ArgumentTwo = double.Parse(txtBoxMain.Text);
-            }
+            labelMain.Content = txtBoxMain.Text == "" ? "Вы ничего не ввели" : ArgumentTwo = double.Parse(txtBoxMain.Text);
 
             switch (Sign)
             {
                 case '/':
                     Result = (ArgumentOne / ArgumentTwo);
-                    txtBoxMain.Text = Result.ToString("F2");
+                    txtBoxMain.Text = chekBoxRounding.IsChecked == true ? Result.ToString("F2") : Result.ToString("F0");
+                    labelMain.Content = $"{ArgumentOne} / {ArgumentTwo} = ";
                     break;
                 case '*':
                     Result = (ArgumentOne * ArgumentTwo);
-                    txtBoxMain.Text = Result.ToString("F2");
+                    txtBoxMain.Text = chekBoxRounding.IsChecked == true ? Result.ToString("F2") : Result.ToString("F0");
+                    labelMain.Content = $"{ArgumentOne} * {ArgumentTwo} = ";
                     break;
                 case '-':
                     Result = (ArgumentOne - ArgumentTwo);
-                    txtBoxMain.Text = Result.ToString("F2");
+                    txtBoxMain.Text = chekBoxRounding.IsChecked == true ? Result.ToString("F2") : Result.ToString("F0");
+                    labelMain.Content = $"{ArgumentOne} - {ArgumentTwo}  = ";
                     break;
                 case '+':
                     Result = (ArgumentOne + ArgumentTwo);
-                    txtBoxMain.Text = Result.ToString("F2");
+                    txtBoxMain.Text = chekBoxRounding.IsChecked == true ? Result.ToString("F2") : Result.ToString("F0");
+                    labelMain.Content = $"{ArgumentOne} + {ArgumentTwo}  = ";
                     break;
             }
         }
