@@ -7,30 +7,26 @@
         mc:Ignorable="d"
         Closing="Window_Closing"
         WindowStartupLocation="CenterScreen"
-        Height="660" Width="400" 
-        MinHeight="660" MinWidth="400"
-        Title="MainWindow" >
+        Height="660" Width="600" 
+        MinHeight="660" MinWidth="600"
+        Title="Калькулятор" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Menu Height="25" VerticalAlignment="Top">
+        <Menu Style="{StaticResource MenuStyle}" Height="25" VerticalAlignment="Top">
             <MenuItem Header="Тип калькулятора">
-                <MenuItem x:Name="Calculater" 
-                      Header="Калькулятор" Click="MenuItem_Click_Calc">
-                </MenuItem>
-                <MenuItem x:Name="IngineeringCalculator" 
-                      Header="Инженерный калькулятор"
-                      Click="MenuItem_Click_EngeneeringCalc"></MenuItem>
+                <MenuItem Style="{StaticResource MenuItemStyle}" x:Name="Calculater" Header="Калькулятор" Click="MenuItem_Click_Calc"/>
+                <MenuItem Style="{StaticResource MenuItemStyle}" x:Name="IngineeringCalculator" Header="Инженерный калькулятор" Click="MenuItem_Click_EngeneeringCalc"/>
                 <Separator />
-                <MenuItem Header="Exit" Click="MenuItem_ExitApp"/>
+                <MenuItem Style="{StaticResource MenuItemStyle}" Header="Exit" Click="MenuItem_ExitApp"/>
             </MenuItem>
         </Menu>
         
         <Frame x:Name="MainFrame"
                Grid.Row="1"
-               Source="/Pages/BasecCalcPage.xaml"
+               Source="/Pages/EngineeringCalcPage.xaml"
                NavigationUIVisibility="Hidden"/>
     </Grid>
 

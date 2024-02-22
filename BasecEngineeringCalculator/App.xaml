@@ -5,6 +5,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            
             <Style x:Key="ButtonSyle" TargetType="Button">
                 <Setter Property="FontSize" Value="15"/>
                 <Setter Property="FontWeight" Value="UltraBold"/>
@@ -17,6 +18,17 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+
+            <Style x:Key="MenuStyle" TargetType="Menu">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="MenuItemStyle" TargetType="MenuItem">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontWeight" Value="UltraBold"/>
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

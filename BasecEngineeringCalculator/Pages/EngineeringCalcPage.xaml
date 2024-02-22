@@ -29,10 +29,11 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Label 
+        <Label
+            x:Name="labelMain"
+            FontSize="30"
             Grid.ColumnSpan="7" 
-            Grid.Row="0" 
-            Content="Ошибка" 
+            Grid.Row="0"  
             HorizontalAlignment="Right" />
 
         <TextBox 
@@ -52,11 +53,11 @@
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="1" Grid.Row="2" Content="n!"/>
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="2" Content="±"/>
 
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="3" Content="asin"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="3" Content="asin" ToolTip="От -1 до 1"/>
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="1" Grid.Row="3" Content="sin"/>
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="3" Content="1/x"/>
 
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="4" Content="acos"/>
+        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="0" Grid.Row="4" Content="acos" ToolTip="От -1 до 1"/>
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="1" Grid.Row="4" Content="cos"/>
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="4" Content="√"/>
 
@@ -69,24 +70,24 @@
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="2" Grid.Row="6" Content="e"/>
 
         <!--#endregion-->
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="2" Content="С"/>
+        <Button Click="Button_ClickCleanAll" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="2" Content="С"/>
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="2" Content="( )"/>
         <Button Click="Button_ClickCleanLast" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="2" Content="⌫"/>
 
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="3" Content="7"/>
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="3" Content="8"/>
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="3" Content="9"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="3" Content="7"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="3" Content="8"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="3" Content="9"/>
 
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="4" Content="4"/>
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="4" Content="5"/>
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="4" Content="6"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="4" Content="4"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="4" Content="5"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="4" Content="6"/>
 
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="5" Content="1"/>
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="5" Content="2"/>
-        <Button Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="5" Content="3"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.Row="5" Content="1"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="4" Grid.Row="5" Content="2"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="5" Content="3"/>
 
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="6" Content="0"/>
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="6" Content=","/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="6" Content="0"/>
+        <Button Click="Button_Click_Get_Number" Style="{StaticResource ButtonSyle}" Grid.Column="5" Grid.Row="6" Content=","/>
 
         <!--#region ЦИФЕРКИ -->
 
@@ -94,7 +95,7 @@
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="3" Content="*"/>
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="4" Content="-"/>
         <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="5" Content="+"/>
-        <Button Click="Button_Click_Get_Sign" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="6" Content="="/>
+        <Button Click="Button_Click_Equals" Style="{StaticResource ButtonSyle}" Grid.Column="6" Grid.Row="6" Content="="/>
 
         <!--#endregion-->
 

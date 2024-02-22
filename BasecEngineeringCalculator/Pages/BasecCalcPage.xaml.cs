@@ -76,6 +76,7 @@ namespace BasecEngineeringCalculator.Pages
                 case "-":
                     try
                     {
+                        if (txtBoxMain.Text == "") txtBoxMain.Text += "-";
                         ArgumentOne = double.Parse(txtBoxMain.Text);
                         txtBoxMain.Text = string.Empty;
                         labelMain.Content = ArgumentOne + "-";

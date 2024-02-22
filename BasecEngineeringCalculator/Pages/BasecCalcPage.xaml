@@ -10,9 +10,9 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -26,10 +26,15 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <CheckBox Content="Округлять до десятичных"
-          x:Name="chekBoxRounding"
-          Grid.ColumnSpan="4"
-          Grid.Row="0"/>
+        <CheckBox 
+            Content="Округлять до десятичных"
+            x:Name="chekBoxRounding"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.Row="0"
+            FontSize="15"
+            VerticalContentAlignment="Center"
+          />
 
         <TextBox x:Name="txtBoxMain"
              FontSize="50"
